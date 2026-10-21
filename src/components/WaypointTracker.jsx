@@ -5,21 +5,21 @@ export default function WaypointTracker() {
   const [activeSection, setActiveSection] = useState('hero');
 
   const chapters = [
-    { id: 'hero', label: '01 BRIEFING' },
-    { id: 'philosophy', label: '02 DOCTRINE' },
-    { id: 'faculty', label: '03 COMMANDERS' },
-    { id: 'expedition', label: '04 3-DAY EXPEDITION' },
-    { id: 'cohort', label: '05 PLATOON' },
-    { id: 'outcomes', label: '06 OUTCOMES' },
-    { id: 'basecamp', label: '07 BASECAMP' },
-    { id: 'pricing', label: '08 QUARTERS' },
-    { id: 'faqs', label: '09 INTEL' },
-    { id: 'dispatch', label: '10 MUSTER' },
+    { id: 'hero', label: 'Briefing' },
+    { id: 'philosophy', label: 'Doctrine' },
+    { id: 'faculty', label: 'Commanders' },
+    { id: 'expedition', label: 'Expedition' },
+    { id: 'cohort', label: 'Cohort' },
+    { id: 'outcomes', label: 'Outcomes' },
+    { id: 'basecamp', label: 'Basecamp' },
+    { id: 'pricing', label: 'Quarters' },
+    { id: 'faqs', label: 'Intel' },
+    { id: 'dispatch', label: 'Muster' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPos = window.scrollY + 200;
+      const scrollPos = window.scrollY + 250;
       for (let i = chapters.length - 1; i >= 0; i--) {
         const el = document.getElementById(chapters[i].id);
         if (el && el.offsetTop <= scrollPos) {
@@ -36,13 +36,13 @@ export default function WaypointTracker() {
     <aside
       style={{
         position: 'fixed',
-        right: '2rem',
+        right: '1.5rem',
         top: '50%',
         transform: 'translateY(-50%)',
         zIndex: 90,
         display: 'none',
         flexDirection: 'column',
-        gap: '0.8rem'
+        gap: '0.9rem'
       }}
       className="desktop-waypoint-tracker"
     >
@@ -57,33 +57,17 @@ export default function WaypointTracker() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'flex-end',
-              gap: '0.6rem',
-              textDecoration: 'none'
+              textDecoration: 'none',
+              padding: '4px'
             }}
             title={ch.label}
           >
-            {isActive && (
-              <span
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: '0.7rem',
-                  color: 'var(--forge-orange)',
-                  background: 'rgba(5, 7, 10, 0.9)',
-                  padding: '0.2rem 0.6rem',
-                  border: '1px solid var(--border-tactical)',
-                  borderRadius: '2px',
-                  whiteSpace: 'nowrap'
-                }}
-              >
-                {ch.label}
-              </span>
-            )}
             <span
               style={{
-                width: isActive ? '10px' : '6px',
-                height: isActive ? '10px' : '6px',
+                width: isActive ? '8px' : '5px',
+                height: isActive ? '8px' : '5px',
                 borderRadius: '50%',
-                background: isActive ? 'var(--forge-orange)' : 'var(--steel-700)',
+                background: isActive ? 'var(--forge-orange)' : 'rgba(255, 255, 255, 0.2)',
                 boxShadow: isActive ? '0 0 10px var(--forge-orange)' : 'none',
                 transition: 'all 0.25s ease'
               }}

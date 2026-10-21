@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldAlert, Target } from 'lucide-react';
 import { EXPEDITION_DATA } from '../utils/data';
 
 export default function Philosophy() {
@@ -10,15 +9,15 @@ export default function Philosophy() {
     <section
       id="philosophy"
       style={{
-        padding: '6rem 0',
+        padding: '7rem 0',
         position: 'relative',
-        borderTop: '1px solid var(--border-subtle)'
+        borderTop: '1px solid rgba(255, 255, 255, 0.06)'
       }}
     >
       <div className="container">
         {/* Single Authoritative Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7 }}
@@ -35,73 +34,63 @@ export default function Philosophy() {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-            gap: '2.5rem',
-            alignItems: 'stretch'
+            gap: '3rem',
+            alignItems: 'center'
           }}
         >
           {/* Left Column: Lead Quote & Operational Philosophy Card */}
           <motion.div
-            initial={{ opacity: 0, x: -35 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.8 }}
             className="tactical-frame"
             style={{
-              padding: '2.5rem',
+              padding: '2.8rem',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between'
             }}
           >
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.5rem' }}>
-                <ShieldAlert size={18} color="var(--forge-orange)" />
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--forge-amber)', letterSpacing: '0.12em' }}>
-                  // OPERATIONAL DOCTRINE
-                </span>
-              </div>
-
               <blockquote
                 style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: 'clamp(1.2rem, 2vw, 1.45rem)',
-                  fontWeight: 700,
+                  fontSize: 'clamp(1.3rem, 2.2vw, 1.6rem)',
+                  fontWeight: 800,
                   color: '#ffffff',
-                  lineHeight: 1.45,
-                  paddingLeft: '1.2rem',
+                  lineHeight: 1.4,
+                  paddingLeft: '1.4rem',
                   borderLeft: '3px solid var(--forge-orange)',
-                  marginBottom: '1.8rem',
+                  marginBottom: '2rem',
                   fontStyle: 'normal'
                 }}
               >
                 “{doctrine.leadQuote}”
               </blockquote>
 
-              <p style={{ color: 'var(--steel-300)', fontSize: '1rem', lineHeight: 1.75, marginBottom: '1.2rem' }}>
+              <p style={{ color: 'var(--steel-300)', fontSize: '1.02rem', lineHeight: 1.8, marginBottom: '1.4rem' }}>
                 {doctrine.p1}
               </p>
 
-              <p style={{ color: 'var(--steel-300)', fontSize: '1rem', lineHeight: 1.75, marginBottom: '2rem' }}>
-                <strong style={{ color: '#ffffff' }}>Operation Forge X is designed to explore these qualities through experience.</strong> Across three days, participants enter a structured, military-inspired environment led by retired officers and experienced faculty. Physical activities, team missions and leadership sessions create opportunities to observe how individuals and groups respond to unfamiliar situations.
+              <p style={{ color: 'var(--steel-300)', fontSize: '1.02rem', lineHeight: 1.8, marginBottom: '2rem' }}>
+                <strong style={{ color: '#ffffff' }}>Operation Forge X is designed to explore these qualities through experience.</strong> Across three days, participants enter a structured, military-inspired environment led by retired officers and experienced faculty.
               </p>
             </div>
 
             {/* Mission Box */}
             <div
               style={{
-                background: 'rgba(255, 94, 20, 0.08)',
+                background: 'rgba(255, 94, 20, 0.06)',
                 border: '1px solid var(--border-tactical)',
                 borderRadius: '3px',
-                padding: '1.4rem'
+                padding: '1.4rem 1.6rem'
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
-                <Target size={16} color="var(--forge-orange)" />
-                <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.95rem', letterSpacing: '0.08em', color: '#ffffff' }}>
-                  THE MISSION
-                </span>
+              <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.95rem', letterSpacing: '0.08em', color: 'var(--forge-orange)', marginBottom: '0.4rem' }}>
+                THE MISSION
               </div>
-              <p style={{ fontSize: '0.92rem', color: 'var(--steel-200)', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: '0.95rem', color: 'var(--steel-200)', lineHeight: 1.6, margin: 0 }}>
                 {doctrine.mission}
               </p>
             </div>
@@ -109,7 +98,7 @@ export default function Philosophy() {
 
           {/* Right Column: High-Res Tactical Field Imagery Card */}
           <motion.div
-            initial={{ opacity: 0, x: 35 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.8 }}
@@ -117,7 +106,7 @@ export default function Philosophy() {
             style={{
               position: 'relative',
               overflow: 'hidden',
-              minHeight: '440px',
+              minHeight: '480px',
               padding: 0
             }}
           >
@@ -140,21 +129,14 @@ export default function Philosophy() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-end',
-                padding: '2rem'
+                padding: '2.5rem'
               }}
             >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-                <div>
-                  <span className="hud-tag military" style={{ marginBottom: '0.8rem' }}>
-                    LIVE FIELD OPERATIONS
-                  </span>
-                  <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em' }}>
-                    REAL-TIME FIELD DECISION MAKING
-                  </div>
-                  <div style={{ fontSize: '0.82rem', color: 'var(--steel-300)', marginTop: '0.3rem' }}>
-                    MANDATORY TACTICAL PLATOON SCENARIOS · NO DESKS · NO POWERPOINTS
-                  </div>
-                </div>
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em' }}>
+                REAL-TIME FIELD DECISION MAKING
+              </div>
+              <div style={{ fontSize: '0.85rem', color: 'var(--steel-300)', marginTop: '0.35rem' }}>
+                Platoon tactical scenarios designed to test judgement when familiar ways of working disappear.
               </div>
             </div>
           </motion.div>

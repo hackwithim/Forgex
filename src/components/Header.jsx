@@ -9,7 +9,7 @@ export default function Header({ onOpenEnlist }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -21,68 +21,26 @@ export default function Header({ onOpenEnlist }) {
   };
 
   const navItems = [
-    { label: 'BRIEFING', href: '#hero' },
     { label: 'DOCTRINE', href: '#philosophy' },
     { label: 'FACULTY', href: '#faculty' },
-    { label: '3-DAY MISSION', href: '#expedition' },
-    { label: 'COHORT', href: '#cohort' },
-    { label: 'OUTCOMES', href: '#outcomes' },
-    { label: 'BASECAMP', href: '#basecamp' },
+    { label: 'EXPEDITION', href: '#expedition' },
     { label: 'QUARTERS', href: '#pricing' },
-    { label: 'INTEL', href: '#faqs' },
+    { label: 'FAQS', href: '#faqs' },
   ];
 
   return (
     <>
-      {/* Tactical Telemetry Ribbon */}
-      <div
-        style={{
-          background: '#040608',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
-          padding: '0.35rem 1.5rem',
-          fontSize: '0.72rem',
-          fontFamily: 'var(--font-mono)',
-          color: 'var(--steel-400)',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          letterSpacing: '0.08em',
-          position: 'relative',
-          zIndex: 101
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <span
-            style={{
-              width: '6px',
-              height: '6px',
-              borderRadius: '50%',
-              background: '#4ade80',
-              boxShadow: '0 0 6px #4ade80'
-            }}
-          />
-          <span>MISSION STATUS: ACTIVE // DEHRADUN EXPEDITION</span>
-        </div>
-        <div style={{ display: 'none', alignItems: 'center', gap: '1.5rem' }} className="telemetry-mid">
-          <span>COORDINATES: 30°18'54"N 78°01'55"E</span>
-          <span>ELEVATION: 700M</span>
-          <span>27–30 NOV 2026</span>
-        </div>
-        <div>
-          <span>ENLISTMENT CLEARANCE: LEVEL-1</span>
-        </div>
-      </div>
-
-      {/* Main Tactical Header */}
+      {/* Sleek Minimalist Header */}
       <header
         style={{
           position: 'sticky',
           top: 0,
           zIndex: 100,
-          background: scrolled ? 'rgba(5, 7, 10, 0.95)' : 'rgba(5, 7, 10, 0.82)',
-          backdropFilter: 'blur(16px)',
-          borderBottom: '1px solid var(--border-subtle)',
-          transition: 'all 0.3s ease'
+          background: scrolled ? 'rgba(5, 7, 10, 0.92)' : 'rgba(5, 7, 10, 0.65)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
+          transition: 'all 0.35s ease'
         }}
       >
         <div
@@ -91,16 +49,16 @@ export default function Header({ onOpenEnlist }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: '72px'
+            height: '76px'
           }}
         >
-          {/* Brand Logo & Title */}
+          {/* Minimal Brand Logo */}
           <a
             href="#hero"
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '0.9rem',
+              gap: '0.85rem',
               textDecoration: 'none',
               color: '#ffffff'
             }}
@@ -112,42 +70,28 @@ export default function Header({ onOpenEnlist }) {
               style={{
                 height: '42px',
                 width: 'auto',
-                filter: 'drop-shadow(0 0 10px rgba(255, 94, 20, 0.6))'
+                filter: 'drop-shadow(0 0 10px rgba(255, 94, 20, 0.5))'
               }}
             />
-            <div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1.25rem',
-                  fontWeight: 800,
-                  letterSpacing: '0.08em',
-                  lineHeight: 1.1,
-                  color: '#ffffff'
-                }}
-              >
-                OPERATION FORGE X
-              </div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: '0.65rem',
-                  letterSpacing: '0.14em',
-                  color: 'var(--forge-orange)',
-                  textTransform: 'uppercase'
-                }}
-              >
-                Military Leadership Expedition
-              </div>
-            </div>
+            <span
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: '1.25rem',
+                fontWeight: 800,
+                letterSpacing: '0.08em',
+                color: '#ffffff'
+              }}
+            >
+              OPERATION FORGE X
+            </span>
           </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation Links (Clean & Spacious) */}
           <nav
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '1.5rem'
+              gap: '2.2rem'
             }}
             className="desktop-nav"
           >
@@ -157,7 +101,7 @@ export default function Header({ onOpenEnlist }) {
                 href={item.href}
                 style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '0.85rem',
+                  fontSize: '0.9rem',
                   fontWeight: 600,
                   letterSpacing: '0.08em',
                   color: 'var(--steel-300)',
@@ -173,27 +117,26 @@ export default function Header({ onOpenEnlist }) {
             ))}
           </nav>
 
-          {/* Header Controls (Sound Toggle & Enlist CTA) */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem' }}>
+          {/* Actions: Sound Toggle & Enlist CTA */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             {/* Audio Toggle */}
             <button
               onClick={handleSoundToggle}
-              title={soundOn ? 'Disable tactical audio telemetry' : 'Enable tactical audio telemetry'}
+              title={soundOn ? 'Mute telemetry audio' : 'Enable telemetry audio'}
               style={{
-                background: soundOn ? 'rgba(255, 94, 20, 0.15)' : 'rgba(255, 255, 255, 0.04)',
-                border: soundOn ? '1px solid var(--forge-orange)' : '1px solid var(--border-subtle)',
-                color: soundOn ? 'var(--forge-orange)' : 'var(--steel-400)',
-                width: '38px',
-                height: '38px',
-                borderRadius: '3px',
+                background: 'transparent',
+                border: 'none',
+                color: soundOn ? 'var(--forge-orange)' : 'var(--steel-500)',
+                width: '36px',
+                height: '36px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 cursor: 'pointer',
-                transition: 'all 0.2s ease'
+                transition: 'color 0.2s ease'
               }}
             >
-              {soundOn ? <Volume2 size={18} /> : <VolumeX size={18} />}
+              {soundOn ? <Volume2 size={19} /> : <VolumeX size={19} />}
             </button>
 
             {/* Enlist CTA */}
@@ -204,15 +147,16 @@ export default function Header({ onOpenEnlist }) {
               }}
               className="btn-primary"
               style={{
-                padding: '0.6rem 1.4rem',
-                fontSize: '0.9rem'
+                padding: '0.65rem 1.4rem',
+                fontSize: '0.88rem',
+                borderRadius: '2px'
               }}
             >
-              <span>ENLIST NOW</span>
-              <ChevronRight size={16} />
+              <span>ENLIST</span>
+              <ChevronRight size={15} />
             </button>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               style={{
@@ -225,7 +169,7 @@ export default function Header({ onOpenEnlist }) {
               className="mobile-toggle"
               aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -236,16 +180,16 @@ export default function Header({ onOpenEnlist }) {
         <div
           style={{
             position: 'fixed',
-            top: '72px',
+            top: '76px',
             left: 0,
             right: 0,
             background: 'rgba(5, 7, 10, 0.98)',
             borderBottom: '1px solid var(--border-tactical)',
-            padding: '1.5rem',
+            padding: '2rem 1.5rem',
             zIndex: 99,
             display: 'flex',
             flexDirection: 'column',
-            gap: '1.2rem'
+            gap: '1.4rem'
           }}
         >
           {navItems.map((item) => (
@@ -256,10 +200,10 @@ export default function Header({ onOpenEnlist }) {
               style={{
                 color: '#ffffff',
                 fontFamily: 'var(--font-heading)',
-                fontSize: '1.1rem',
-                fontWeight: 600,
+                fontSize: '1.2rem',
+                fontWeight: 700,
                 textDecoration: 'none',
-                letterSpacing: '0.05em'
+                letterSpacing: '0.06em'
               }}
             >
               {item.label}
@@ -269,12 +213,9 @@ export default function Header({ onOpenEnlist }) {
       )}
 
       <style>{`
-        @media (max-width: 1024px) {
+        @media (max-width: 900px) {
           .desktop-nav { display: none !important; }
           .mobile-toggle { display: block !important; }
-        }
-        @media (min-width: 768px) {
-          .telemetry-mid { display: flex !important; }
         }
         .nav-link:hover {
           color: var(--forge-orange) !important;
