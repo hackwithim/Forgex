@@ -251,31 +251,55 @@ img {
 
 /* Section Header Styles */
 .section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin-bottom: 3.5rem;
   position: relative;
+  width: 100%;
 }
 
 .section-header .hud-tag {
-  margin-bottom: 1rem;
+  display: inline-flex;
+  margin-bottom: 1.25rem;
+  align-self: center;
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.1;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.15;
   font-weight: 800;
-  background: linear-gradient(180deg, #ffffff 30%, var(--steel-400) 100%);
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #ffffff 40%, var(--steel-400) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
   position: relative;
-  display: inline-block;
+  display: block;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--forge-orange);
+  margin: 0.9rem auto 0;
+  box-shadow: 0 0 10px rgba(255, 94, 20, 0.5);
+  border-radius: 1px;
 }
 
 .section-title-highlight {
-  background: linear-gradient(135deg, #fff 0%, var(--forge-amber) 60%, var(--forge-orange) 100%);
+  background: linear-gradient(180deg, #ffffff 40%, var(--steel-400) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 .section-subtitle {
@@ -284,6 +308,7 @@ img {
   margin: 0 auto;
   color: var(--steel-300);
   line-height: 1.7;
+  text-align: center;
 }
 
 /* Tactical Corner Framing for Cards */
