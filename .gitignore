@@ -16,3 +16,8 @@ desktop.ini
 
 # Temporary Logs
 *.log
+
+# Dependencies & Build Outputs
+node_modules/
+dist/
+.vite/

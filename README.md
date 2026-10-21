@@ -34,7 +34,7 @@ When market headwinds, crises, or ambiguity strike, decisions must be made with 
 - **Interactive Quarters & Tariff Engine**: Real-time switchable Single vs. Twin-share occupancy calculations with dynamic 18% GST breakdown.
 - **Tactical Waypoint Navigation**: Floating military radar chapter indicator with live scroll progress.
 - **Direct Dispatch WhatsApp Integration**: Pre-formatted encrypted enlistment dispatches connected directly to mission coordinators.
-- **Full Zero-Dependency Stack**: Pure Vanilla HTML5, modern CSS3 custom properties, and native ES6 JavaScript — runs instantly on any browser.
+- **Full Modern React 19 Architecture**: Built with Vite, Framer Motion, Lenis smooth scrolling, and Lucide icons.
 
 ---
 
@@ -42,9 +42,10 @@ When market headwinds, crises, or ambiguity strike, decisions must be made with 
 
 | Layer | Technology |
 |---|---|
-| **Structure** | Semantic HTML5 with micro-data and accessibility attributes |
-| **Styling** | Vanilla CSS3 (Custom design system, CSS Grid, Flexbox, Keyframe animations) |
-| **Logic** | Vanilla ES6+ JavaScript |
+| **Framework** | React 19 + Vite 6 |
+| **Animation Engine** | Framer Motion (Spring physics, layout animations, scroll-linked parallax) |
+| **Smooth Scrolling** | Lenis by Studio Freight (Momentum inertia scrolling) |
+| **Icons** | Lucide React |
 | **Audio** | Web Audio API (Synthesized square & sine wave tactical sound generator) |
 | **Typography** | Google Fonts (`Cinzel`, `Rajdhani`, `Inter`, `JetBrains Mono`) |
 
@@ -52,20 +53,23 @@ When market headwinds, crises, or ambiguity strike, decisions must be made with 
 
 ## 🚀 Running Locally
 
-No installation or build process is required.
-
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/hackwithim/Forgex.git
+   cd Forgex
    ```
-2. **Launch directly:**
-   - Double-click [`index.html`](index.html) to open in any web browser, OR
-   - Run a lightweight local server:
-     ```bash
-     # Python 3
-     python -m http.server 8080
-     ```
-   - Open `http://localhost:8080` in your browser.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the local development server:**
+   ```bash
+   npm run dev
+   ```
+4. **Open in your browser:**
+   ```
+   http://localhost:8080/ (or http://localhost:3000/)
+   ```
 
 ---
 
