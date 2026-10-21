@@ -26,10 +26,10 @@ export const EXPEDITION_DATA = {
       name: "Col. Rajeev Bharwan (Retd.)",
       branch: "army",
       branchName: "Indian Army",
-      tag: "Commanding Officer",
+      tag: "Expedition Commander",
       role: "Gorkha Rifles & Airborne Specialist",
       image: "assets/images/faculty/bharwan.jpg",
-      bio: "Veteran of the Indian Army with over two decades of distinguished service in high-altitude warfare, counter-insurgency, and parachute operations.",
+      bio: "Veteran of the Indian Army with over two decades of distinguished service in high-altitude warfare, counter-insurgency, and parachute operations. Day 01 Keynote: What It Takes to Lead.",
       dossier: [
         "Commended for resolute leadership in high-risk border operations.",
         "Specialist in unconventional problem-solving and rapid combat team cohesion.",
@@ -37,78 +37,48 @@ export const EXPEDITION_DATA = {
       ]
     },
     {
+      id: "kashyap_sc",
+      name: "Col. Kaushal Kashyap, SC",
+      branch: "army",
+      branchName: "Special Forces",
+      tag: "Shaurya Chakra",
+      role: "Former Special Forces Commander & Author",
+      image: "assets/images/faculty/kashyap_sc.jpg",
+      bio: "Decorated Special Forces Commander and Shaurya Chakra recipient. Renowned author and military leadership strategist on psychological endurance, warrior courage, and high-performance team mindsets.",
+      dossier: [
+        "Conferred the Shaurya Chakra for gallantry in frontline Special Forces operations.",
+        "Pioneered high-altitude commando strike coordination and situational composure models.",
+        "Author on operational grit and building resilient leadership cultures under extreme friction."
+      ]
+    },
+    {
       id: "kapoor",
       name: "Air Marshal Nagesh Kapoor (Retd.)",
       branch: "airforce",
       branchName: "Indian Air Force",
-      tag: "Former Vice Chief / Air Commander",
-      role: "Fighter Pilot & Strategic Air Command",
+      tag: "Former Vice Chief of Air Staff",
+      role: "SYSM · PVSM · AVSM · VM",
       image: "assets/images/faculty/kapoor.jpg",
-      bio: "Top-tier supersonic fighter pilot with thousands of tactical flying hours. Directed strategic aerial doctrine and large-scale joint service exercises.",
+      bio: "Former Vice Chief of Air Staff, Indian Air Force. Decorated with SYSM, PVSM, AVSM, VM. Top-tier supersonic combat pilot with thousands of flying hours who directed strategic air doctrine.",
       dossier: [
-        "Commanded premier operational fighter bases under high operational readiness states.",
-        "Expert in split-second high-G decision making under severe uncertainty.",
-        "Delivers masterclasses on strategic vision, situational clarity, and team survivability."
-      ]
-    },
-    {
-      id: "pandey",
-      name: "Maj. Gen. Yash Mor / Pandey (Retd.)",
-      branch: "army",
-      branchName: "Indian Army",
-      tag: "Corps Commander",
-      role: "Strategic Command & Human Dynamics",
-      image: "assets/images/faculty/pandey.jpg",
-      bio: "Veteran two-star general who commanded thousands of soldiers along active borders. Highly sought-after mentor on leadership ethics and mental resilience.",
-      dossier: [
-        "Decades of experience resolving multi-theater tactical impasses.",
-        "Pioneered psychological fortitude models adopted across armed forces training academies.",
-        "Guides founders on authentic leadership and ethical clarity in turbulent markets."
+        "Conferred the Param Vishisht Seva Medal and Ati Vishisht Seva Medal for extraordinary service.",
+        "Expert in split-second high-G decision making under severe uncertainty and strategic ambiguity.",
+        "Delivers masterclasses on strategic air dominance, organizational survivability, and mission clarity."
       ]
     },
     {
       id: "tewari",
       name: "Cmde. Shiv Tewari (Retd.)",
       branch: "navy",
-      branchName: "Indian Navy",
-      tag: "Fleet Commander",
-      role: "Warship Command & Maritime Strategy",
+      branchName: "Indian Navy & DefTech",
+      tag: "Warship Fleet Commander",
+      role: "Co-founder, Aksha Integrated Design & Arista Risk",
       image: "assets/images/faculty/tewari.jpg",
-      bio: "Distinguished naval officer who commanded frontline destroyers and directed naval aerospace warfare programs across the Indian Ocean.",
+      bio: "Ex-Indian Navy commander and defense-technology entrepreneur. Co-founder of Aksha Integrated Design & Arista Risk. Bridges frontline naval command with deep-tech innovation and corporate risk strategy.",
       dossier: [
-        "Commanded guided missile destroyers in complex blue-water tactical exercises.",
-        "Architect of maritime crisis response drills and cross-functional team coordination.",
-        "Teaches high-stakes operational alignment and communication across isolated units."
-      ]
-    },
-    {
-      id: "kashyap",
-      name: "Cdr. Girish Kashyap (Retd.)",
-      branch: "navy",
-      branchName: "Navy & DefTech",
-      tag: "DefTech Innovator",
-      role: "Naval Aviation & Tech Operations",
-      image: "assets/images/faculty/kashyap.jpg",
-      bio: "Naval aviator and technology transition specialist with deep expertise bridging defense hardware innovation with modern technological agility.",
-      dossier: [
-        "Spearheaded cutting-edge defense aviation modernization protocols.",
-        "Veteran of search-and-rescue and tactical maritime strike deployments.",
-        "Bridges military operational precision with digital ecosystem disruption."
-      ]
-    },
-    {
-      id: "singh",
-      name: "Brig. Vikram Singh (Retd.)",
-      branch: "army",
-      branchName: "Indian Army",
-      tag: "Brigade Commander",
-      role: "Infantry Brigade & Frontier Security",
-      image: "assets/images/faculty/singh.jpg",
-      bio: "Decorated brigade commander seasoned in counter-terror tactical operations and border defense coordination across treacherous terrain.",
-      dossier: [
-        "Led multiple infantry battalions in volatile operational sectors.",
-        "Authority on squad accountability, chain-of-command friction, and ground-level morale.",
-        "Coaches executives on instilling unwavering ownership within cross-functional teams."
+        "Commanded guided-missile destroyers in complex blue-water tactical exercises.",
+        "Architect of maritime defense modernization programs and joint aerospace initiatives.",
+        "Guides founders on technological agility, supply-chain resilience, and crisis alignment."
       ]
     },
     {
@@ -116,14 +86,29 @@ export const EXPEDITION_DATA = {
       name: "Wg. Cdr. Amit Sathe (Retd.)",
       branch: "airforce",
       branchName: "Indian Air Force",
-      tag: "Fighter Instructor",
-      role: "Fighter Weapons & Combat Tactics",
+      tag: "Combat Fighter Pilot",
+      role: "Host, Officers' Mess / Night 02 Immersion",
       image: "assets/images/faculty/sathe.jpg",
-      bio: "Combat fighter pilot and Qualified Flying Instructor with mastery in high-stress simulation, cockpit resource management, and crew coordination.",
+      bio: "Combat fighter pilot and Qualified Flying Instructor with mastery in supersonic tactics and cockpit resource management. Host of the Night 02 traditional Officers' Mess banquet.",
       dossier: [
-        "Instructed elite fighter squadrons in supersonic combat maneuvering.",
-        "Master of debriefing culture where failure is deconstructed without ego.",
-        "Translates aviation post-mission analytics to enterprise post-mortems and learning loops."
+        "Instructed elite fighter squadrons in supersonic combat maneuvering and high-G drills.",
+        "Master of debriefing culture where failure is deconstructed without ego or hierarchy.",
+        "Translates aviation post-flight analytics to enterprise post-mortems and learning loops."
+      ]
+    },
+    {
+      id: "kaushalendra",
+      name: "Lt. Col. Kaushalendra Singh, SM",
+      branch: "army",
+      branchName: "Indian Army & Special Ops",
+      tag: "Sena Medal Veteran",
+      role: "Host, 'Monks & Warriors' / Night 01 Immersion",
+      image: "assets/images/faculty/kaushalendra.jpg",
+      bio: "Decorated combat veteran and Sena Medal recipient. Host of the Night 01 campfire session 'Monks & Warriors,' bridging battlefield grit with contemplative discipline and mental fortitude.",
+      dossier: [
+        "Awarded the Sena Medal for gallantry and resolute command in active combat operations.",
+        "Parachute-trained combat leader experienced in unconventional mountain warfare.",
+        "Leads the Night 01 campfire exploration into character, composure, and ethical leadership."
       ]
     }
   ],
