@@ -77,7 +77,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer onOpenEnlist={() => handleOpenEnlist('single')} />
 
       {/* Waypoint Chapter Radar (Desktop) */}
       <WaypointTracker />
