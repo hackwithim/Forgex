@@ -127,19 +127,20 @@ export default function Hero({ onOpenEnlist }) {
             transition={{ duration: 0.8, delay: 0.35 }}
             style={{
               fontFamily: 'var(--font-mono)',
-              fontSize: '0.88rem',
+              fontSize: 'clamp(0.78rem, 2.4vw, 0.88rem)',
               color: 'var(--steel-300)',
               letterSpacing: '0.06em',
               marginBottom: '2.5rem',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '0.8rem'
+              gap: '0.6rem',
+              flexWrap: 'wrap'
             }}
           >
-            <span>{EXPEDITION_DATA.dates}</span>
+            <span style={{ whiteSpace: 'nowrap' }}>{EXPEDITION_DATA.dates}</span>
             <span style={{ color: 'var(--forge-orange)' }}>·</span>
-            <span>{EXPEDITION_DATA.location}</span>
+            <span style={{ whiteSpace: 'nowrap' }}>{EXPEDITION_DATA.location}</span>
           </motion.div>
 
           {/* Single High-Impact Action Button */}
